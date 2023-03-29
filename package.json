@@ -1,0 +1,25 @@
+{
+  "name": "svg_creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjlynch123/SVG_Creator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjlynch123/SVG_Creator/issues"
+  },
+  "homepage": "https://github.com/mjlynch123/SVG_Creator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
