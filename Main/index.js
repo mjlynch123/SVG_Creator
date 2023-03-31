@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// Creating a class for our logo generator
 class LogoGen {
   constructor() {
     this.text = "";
@@ -9,6 +10,7 @@ class LogoGen {
     this.shapeColor = "";
   }
 
+  // Getting user input for the text
   async getUserInput() {
     const textInput = await inquirer.prompt({
       name: "text",
@@ -17,6 +19,7 @@ class LogoGen {
     });
     this.logoText = textInput.text;
 
+    // Get user input for the text color
     const textColorInput = await inquirer.prompt({
       name: "color",
       message: "Enter the text color:",
@@ -24,6 +27,7 @@ class LogoGen {
     });
     this.textColor = textColorInput.color;
 
+    // Getting the shape 
     const shapeInput = await inquirer.prompt({
       type: "list",
       name: "shape",
@@ -32,6 +36,7 @@ class LogoGen {
     });
     this.shape = shapeInput.shape.toLowerCase();
 
+    // Getting the shape 
     const shapeColorInput = await inquirer.prompt({
       name: "color",
       message: `Enter the ${this.shape} color:`,
@@ -57,6 +62,7 @@ class LogoGen {
         break;
     }
 
+    // Creating the svg and adding the inputs to the desired spots
     const svgContent = `
     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 50 50">
         ${shapeContent}
