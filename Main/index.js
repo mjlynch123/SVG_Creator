@@ -64,7 +64,7 @@ class LogoGen {
 
     // Creating the svg and adding the inputs to the desired spots
     const svgContent = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 50 50">
+    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 50 50" x="50%" y="50%">
         ${shapeContent}
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="${this.textColor}">${this.logoText}</text>
     </svg>`;
